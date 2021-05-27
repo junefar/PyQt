@@ -35,6 +35,7 @@ html2canvas(el[0], {
     windowWidth: el.outerWidth(true),
 }).then(function(canvas) {
     window._self.saveImage(canvas.toDataURL());
+    canvas = null;
 });
 """
 
@@ -96,7 +97,7 @@ class Window(QWidget):
         settings.setAttribute(QWebEngineSettings.ScreenCaptureEnabled, True)
         self.webView.loadStarted.connect(self.onLoadStarted)
         self.webView.loadFinished.connect(self.onLoadFinished)
-        self.webView.load(QUrl("https://pyqt5.com"))
+        self.webView.load(QUrl("https://pyqt.site"))
 
     def onLoadStarted(self):
         print('load started')
@@ -184,7 +185,7 @@ if __name__ == "__main__":
     # 开启F12 控制台功能，需要单独通过浏览器打开这个页面
     # 这里可以做个保护, 发布软件,启动时把这个环境变量删掉。防止他人通过环境变量开启
     os.environ['QTWEBENGINE_REMOTE_DEBUGGING'] = '9966'
-    sys.excepthook = cgitb.enable(1, None, 5, '')
+    cgitb.enable(1, None, 5, '')
     app = QApplication(sys.argv)
     w = Window()
     w.show()

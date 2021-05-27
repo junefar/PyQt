@@ -1,7 +1,9 @@
 # 各种各样的PyQt测试和例子
 
-[![Blog](https://img.shields.io/badge/blog-pyqt5-green.svg)](https://pyqt5.com)
+[![Blog](https://img.shields.io/badge/blog-pyqt-green.svg)](https://pyqt.site)
 [![codebeat badge](https://codebeat.co/badges/d23d0dc8-aef3-43d2-96aa-e3215b2c9861)](https://codebeat.co/projects/github-com-pyqt5-pyqt-master)
+[![Badge](https://img.shields.io/badge/link-996.icu-%23FF4D5B.svg?style=flat-square)](https://996.icu/#/zh_CN)
+[![LICENSE](https://img.shields.io/badge/license-Anti%20996-blue.svg?style=flat-square)](https://github.com/996icu/996.ICU/blob/master/LICENSE)
 
 https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分享大家平时学习中记录的笔记和例子，以及对遇到的问题进行收集整理。
 
@@ -10,10 +12,6 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
 [![GitHub forks](https://img.shields.io/github/forks/PyQt5/PyQt.svg?style=social)](https://github.com/PyQt5/PyQt/fork)
 
 如果您觉得这里的东西对您有帮助，别忘了帮忙点一颗:star:小星星:star:
-
-## 微信博客小程序
-
-<img src="Donate/wxblog.jpg" height="250" width="250">
 
 [客户端下载](https://github.com/PyQt5/PyQtClient/releases)
 
@@ -104,6 +102,7 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
   - [QSlider](QSlider)
     - [滑动条点击定位](QSlider/ClickJumpSlider.py)
     - [双层圆环样式](QSlider/QssQSlider.py)
+    - [低频率值变化](QSlider/LfSlider.py)
 
 - Display Widgets
   - [QLabel](QLabel)
@@ -113,9 +112,11 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
     - [显示.9格式图片（气泡）](QLabel/NinePatch.py)
     - [圆形图片](QLabel/CircleImage.py)
   - [QTextBrowser](QTextBrowser)
+    - [动态加载图片](QTextBrowser/DynamicRes.py)
   - [QGraphicsView](QGraphicsView)
     - [绘制世界地图](QGraphicsView/WorldMap.py)
     - [添加QWidget](QGraphicsView/AddQWidget.py)
+    - [图片查看器](QGraphicsView/ImageView.py)
   - [QCalendarWidget](QCalendarWidget)
     - [QSS美化日历样式](QCalendarWidget/CalendarQssStyle.py)
   - [QLCDNumber](QLCDNumber)
@@ -125,6 +126,9 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
     - [百分比进度条](QProgressBar/PercentProgressBar.py)
     - [Metro进度条](QProgressBar/MetroCircleProgress.py)
     - [水波纹进度条](QProgressBar/WaterProgressBar.py)
+    - [圆形水位进度条](QProgressBar/WaterProgress.py)
+  - [QSplashScreen](QSplashScreen)
+    - [启动画面动画](QSplashScreen/GifSplashScreen.py)
   - [QOpenGLWidget](QOpenGLWidget)
   - [QWebView](QWebView)
     - [梦幻树](QWebView/DreamTree.py)
@@ -139,6 +143,7 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
     - [网页整体截图](QWebEngineView/ScreenShotPage.py)
     - [同网站不同用户](QWebEngineView/SiteDiffUser.py)
     - [拦截请求](QWebEngineView/BlockRequest.py)
+    - [拦截请求内容](QWebEngineView/BlockRequestData.py)
     - [浏览器下载文件](Test/partner_625781186/6.QWebEngineView下载文件)
     - [打印网页](Test/partner_625781186/17_打印预览qwebengineview)
 
@@ -147,6 +152,7 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
   - [moveToThread](QThread/moveToThread.py)
   - [线程挂起恢复](QThread/SuspendThread.py)
   - [线程休眠唤醒](QThread/WakeupThread.py)
+  - [线程退出](QThread/QuitThread.py)
 
 - [QtQuick](QtQuick)
   - [Flat样式](QtQuick/FlatStyle.py)
@@ -168,6 +174,7 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
   - [横向百分比柱状图表](QtChart/HorizontalPercentBarChart.py)
   - [散点图表](QtChart/ScatterChart.py)
   - [图表主题动画](QtChart/ChartThemes.py)
+  - [CPU动态折线图](QtChart/CpuLineChart.py)
 
 - [QtDataVisualization](QtDataVisualization)
   - [柱状图3D](QtDataVisualization/BarsVisualization.py)
@@ -196,11 +203,16 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
 
 - [QPainter](QPainter)
 
+- [QtWinExtras](QtWinExtras)
+  - [任务栏进度条](QtWinExtras/TaskbarProgress.py)
+  - [任务栏缩略图工具按钮](QtWinExtras/ThumbnailToolBar.py)
+
 - Others
   - [QFont](QFont)
     - [加载自定义字体](QFont/AwesomeFont.py)
   - [QMenu](QMenu)
     - [菜单设置多选并且不关闭](QMenu/MultiSelect.py)
+    - [仿QQ右键菜单](QMenu/QQMenu.py)
     - [悬停菜单](Test/partner_625781186/5.hoverMenu)
   - [QAxWidget](QAxWidget)
     - [显示Word、Excel、PDF文件](QAxWidget/ViewOffice.py)
@@ -243,6 +255,9 @@ https://pyqt.site 论坛是专门针对PyQt5学习和提升开设的网站，分
   - [背景连线动画](Demo/CircleLine.py)
   - [判断信号是否连接](Demo/IsSignalConnected.py)
   - [调用虚拟键盘](Demo/CallVirtualKeyboard.py)
+  - [动态忙碌光标](Demo/GifCursor.py)
+  - [屏幕变动监听](Demo/ScreenNotify.py)
+  - [无边框窗口](Demo/NewFramelessWindow.py)
 
 # QQ群
 

@@ -22,6 +22,9 @@
   - [调整窗口显示边框](#19调整窗口显示边框)
   - [判断信号是否连接](#20判断信号是否连接)
   - [调用虚拟键盘](#21调用虚拟键盘)
+  - [动态忙碌光标](#22动态忙碌光标)
+  - [屏幕变动监听](#23屏幕变动监听)
+  - [无边框窗口](#24无边框窗口)
 
 ## 1、重启窗口Widget
 [运行 RestartWindow.py](RestartWindow.py)
@@ -203,7 +206,8 @@ PyQt 结合 Opencv 进行人脸检测；
 ## 20、判断信号是否连接
 [运行 IsSignalConnected.py](IsSignalConnected.py)
 
-通过 `isSignalConnected` 判断是否连接
+1. 通过 `isSignalConnected` 判断是否连接
+2. 通过对象的 `receivers` 获取连接的数量来判断
 
 ![IsSignalConnected](ScreenShot/IsSignalConnected.png)
 
@@ -215,3 +219,26 @@ PyQt 结合 Opencv 进行人脸检测；
 
 ![CallVirtualKeyboard1](ScreenShot/CallVirtualKeyboard1.png)
 ![CallVirtualKeyboard2](ScreenShot/CallVirtualKeyboard2.png)
+
+## 22、动态忙碌光标
+[运行 GifCursor.py](GifCursor.py)
+
+通过定时器不停的修改光标图片来实现动态效果
+
+![GifCursor](ScreenShot/GifCursor.gif)
+
+## 23、屏幕变动监听
+[运行 ScreenNotify.py](ScreenNotify.py)
+
+通过定时器减少不同的变化信号，尽量保证只调用一次槽函数来获取信息
+
+![ScreenNotify](ScreenShot/ScreenNotify.png)
+
+## 24、无边框窗口
+[运行 NewFramelessWindow.py](NewFramelessWindow.py)
+
+1. 该方法只针对 `Qt5.15` 以上版本有效
+2. 通过事件过滤器判断边缘设置鼠标样式
+3. 处理点击事件交通过 `QWindow.startSystemMove` 和 `QWindow.startSystemResize` 传递给系统处理
+
+![NewFramelessWindow](ScreenShot/NewFramelessWindow.gif)
